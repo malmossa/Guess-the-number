@@ -7,7 +7,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Zero To Hundred</title>
+  <title>Guess the number</title>
 
   <!-- Bootstrap CSS & Fontawesome -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Zero-To-Hundred"> Git Repo </a>
+            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Guess-the-number"> Git Repo </a>
           </li>
         </ul>
       </div>
@@ -57,42 +57,32 @@
   <!-- Main Section -->
   <main class="flex-shrink-0">
     <div class="container mt-5">
-      <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col col-lg-4 border-right border-2">
-          <h1>Zero To Hundred: A Coding Project</h1>
+      <div class="col">
+        <div class="row-12 ">
+          <h1 class="text-center">Guess the number: A Coding Project</h1>
           <h4 class="lead">
-            Live life one loop at a time. A JavaScript exercise using loops.
-            Write a program the displays the numbers from 0 to 100. Display
-            the even numbers in <strong>BOLD</strong>
+            Simple guess the number type game. It should choose a random number between 1 and 100, then challenge the
+            player to
+            guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if
+            they are
+            wrong, whether the guess was too low or too high. It should also tell the player what numbers they
+            previously guessed.
+            The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the
+            player
+            should be given an option to start playing again.
           </h4>
-          <h2 class="mt-2 border-bottom border-2">Instructions</h2>
-          <p>Enter a starting value and a ending value. Press the button and the values will appear.</p>
         </div>
-        <div class="col col-lg-8">
-          <div>
-            <h5>Enter Values</h5>
-            <form class="row gy-2 gx-3">
+        <div class="row justify-content-center mb-3 mt-5">
+          <form class="col-md-8">
+            <div class="form-row align-items-center">
               <div class="col">
-                <input id="startValue" type="number" class="form-control" placeholder="Start Value" value=0
-                  aria-label="Start Value">
+                <input type="number" class="form-control" id="number" placeholder="Guess the number">
               </div>
-              <div class="col">
-                <input id="endValue" type="number" class="form-control" placeholder="End Value" value=100
-                  aria-label="End Value">
+              <div class="col-auto">
+                <button type="submit" class="btn btn-dark">Submit</button>
               </div>
-              <div class="col-12 d-flex justify-content-end mt-1">
-                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Display the Values</button>
-              </div>
-            </form>
-            <h2 class="mt-5 border-bottom border-2">Results</h2>
-            <div class="table-responsive">
-              <table class="table table-striped table-sm">
-                <tbody id="results">
-                  <!-- Results Go here -->
-                </tbody>
-              </table>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
