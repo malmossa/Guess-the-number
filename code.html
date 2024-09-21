@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Zero To Hundred</title>
+
+  <!-- Bootstrap CSS & Fontawesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="icon" type="image/png" href="img/icon_logo.png" />
+
+  <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Navigation Section -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/mason_logo.png" class="mr-2"
+          alt="Logo" width="200" height="60" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="app.html">
+              The App
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="code.html">
+              The Code
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Zero-To-Hundred"> Git Repo </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="flex-shrink-0">
+    <div class="container py-5 px-5 mt-5">
+      <h2 class="border-1 border-bottom border-dark">
+        The Code for Zero To Hundred
+      </h2>
+      <div class="row row-cols-1 row-cols-lg-2 mt-3">
+        <div class="col-lg-8">
+          <pre class="line-numbers">
+            <code class="language-javascript">
+              const startValue = document.getElementById("startValue");
+              const endValue = document.getElementById("endValue");
+              const btn = document.getElementById("btnSubmit");
+              const result = document.getElementById("results");
+
+              btn.addEventListener("click", displayValues);
+
+              function getValues()
+              {
+                let start = startValue.value;
+                let end = endValue.value;
+
+                // Convert to integers
+                start = parseInt(start);
+                end = parseInt(end);
+
+                let valuesRange = [];
+
+                for (let i = start; i <= end; i++)
+                { valuesRange.push(i);
+                  return valuesRange;
+                }
+              }
+
+              function displayValues()
+              {
+                let numbers = getValues();
+
+                let className = "";
+
+                for (let i = 0; i < numbers.length; i++)
+                {
+                  if (numbers[i] % 2 == 0)
+                  {
+                    className = "even";
+                  } else {
+                    className = "odd";
+                  }
+                  result.innerHTML += `<tr><td class="${className}">${numbers[i]}</td></tr>`;
+                }
+              }
+
+            </code>
+          </pre>
+        </div>
+        <div class="col-lg-4">
+          <h5>Summary</h5>
+          <p>
+            This JavaScript code dynamically generates a range of numbers based on user input and displays them in an
+            HTML table.
+            Each number is styled differently depending on whether it is even or odd.
+          </p>
+          <h5>Code Structure</h5>
+          <ul>
+            <li><strong>Element Selection:</strong><br>
+              <ul>
+                <li>The code starts by selecting HTML elements using document.getElementById for startValue, endValue,
+                  btnSubmit, and results.
+                </li>
+              </ul>
+            </li>
+            <li><strong>Event Listener:</strong><br>
+              <ul>
+                <li>An event listener is added to the button (btnSubmit). When the button is clicked, the displayValues
+                  function is triggered.
+                </li>
+              </ul>
+            </li>
+            <li><strong>Function Definitions:</strong><br>
+              <ul>
+                <li>getValues Function:<br>
+                  <ul>
+                    <li>Retrieves the start and end values from the input fields.</li>
+                    <li>Converts these values to integers.</li>
+                    <li>Generates an array (valuesRange) containing all numbers from the start value to the end value.
+                    </li>
+                    <li>Returns the array of numbers.</li>
+                  </ul>
+                </li>
+                <li>displayValues Function:<br>
+                  <ul>
+                    <li>Calls the getValues function to get the array of numbers.</li>
+                    <li>Iterates through the array and determines if each number is even or odd.</li>
+                    <li>Appends each number to the results table with a class of either “even” or “odd” for styling
+                      purposes.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--Footer Section -->
+  <footer class="footer mt-auto py-3 navbar-dark">
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-lg-3 gy-2">
+        <div
+          class="col order-last order-lg-first text-light d-flex align-items-center justify-content-center justify-content-lg-start">
+          <div>
+            <span class="text-muted">&copy;2024</span> Mason Dev |
+            malmossa@gmail.com
+          </div>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+          <img src="img/mason_logo.png" alt="Logo" height="60" width="200" />
+        </div>
+        <div class="col d-flex align-items-center justify-content-center justify-content-lg-end">
+          <div class="row">
+            <div class="col social p-0">
+              <a href="https://www.linkedin.com/in/mansor-almossa/" target="_blank"><i
+                  class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <div class="col social">
+              <a href="https://github.com/malmossa" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+
+  <script src="js/prism.js"></script>
+
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      "remove-trailing": true,
+      "remove-indent": true,
+      "left-trim": true,
+      "right-trim": true,
+    });
+  </script>
+
+</body>
+
+</html>

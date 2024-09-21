@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Zero To Hundred</title>
+
+  <!-- Bootstrap CSS & Fontawesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="icon" type="image/png" href="img/icon_logo.png" />
+
+  <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Navigation Section -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/mason_logo.png" class="mr-2"
+          alt="Logo" width="200" height="60" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="app.html">
+              The App
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="code.html">
+              The Code
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Zero-To-Hundred"> Git Repo </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="flex-shrink-0">
+    <div class="container mt-5">
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col col-lg-4 border-right border-2">
+          <h1>Zero To Hundred: A Coding Project</h1>
+          <h4 class="lead">
+            Live life one loop at a time. A JavaScript exercise using loops.
+            Write a program the displays the numbers from 0 to 100. Display
+            the even numbers in <strong>BOLD</strong>
+          </h4>
+          <h2 class="mt-2 border-bottom border-2">Instructions</h2>
+          <p>Enter a starting value and a ending value. Press the button and the values will appear.</p>
+        </div>
+        <div class="col col-lg-8">
+          <div>
+            <h5>Enter Values</h5>
+            <form class="row gy-2 gx-3">
+              <div class="col">
+                <input id="startValue" type="number" class="form-control" placeholder="Start Value" value=0
+                  aria-label="Start Value">
+              </div>
+              <div class="col">
+                <input id="endValue" type="number" class="form-control" placeholder="End Value" value=100
+                  aria-label="End Value">
+              </div>
+              <div class="col-12 d-flex justify-content-end mt-1">
+                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Display the Values</button>
+              </div>
+            </form>
+            <h2 class="mt-5 border-bottom border-2">Results</h2>
+            <div class="table-responsive">
+              <table class="table table-striped table-sm">
+                <tbody id="results">
+                  <!-- Results Go here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--Footer Section -->
+  <footer class="footer mt-auto py-3 navbar-dark">
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-lg-3 gy-2">
+        <div
+          class="col order-last order-lg-first text-light d-flex align-items-center justify-content-center justify-content-lg-start">
+          <div>
+            <span class="text-muted">&copy;2024</span> Mason Dev |
+            malmossa@gmail.com
+          </div>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+          <img src="img/mason_logo.png" alt="Logo" height="60" width="200" />
+        </div>
+        <div class="col d-flex align-items-center justify-content-center justify-content-lg-end">
+          <div class="row">
+            <div class="col social p-0">
+              <a href="https://www.linkedin.com/in/mansor-almossa/" target="_blank"><i
+                  class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <div class="col social">
+              <a href="https://github.com/malmossa" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+
+  <!-- JavaScript -->
+  <script src="js/site.js"></script>
+
+</body>
+
+</html>
