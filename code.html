@@ -7,7 +7,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Zero To Hundred</title>
+  <title>Guess the number</title>
 
   <!-- Bootstrap CSS & Fontawesome -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -48,7 +48,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Zero-To-Hundred"> Git Repo </a>
+            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Guess-the-number"> Git Repo </a>
           </li>
         </ul>
       </div>
@@ -59,53 +59,12 @@
   <main class="flex-shrink-0">
     <div class="container py-5 px-5 mt-5">
       <h2 class="border-1 border-bottom border-dark">
-        The Code for Zero To Hundred
+        The Code for Guess the number
       </h2>
       <div class="row row-cols-1 row-cols-lg-2 mt-3">
         <div class="col-lg-8">
           <pre class="line-numbers">
             <code class="language-javascript">
-              const startValue = document.getElementById("startValue");
-              const endValue = document.getElementById("endValue");
-              const btn = document.getElementById("btnSubmit");
-              const result = document.getElementById("results");
-
-              btn.addEventListener("click", displayValues);
-
-              function getValues()
-              {
-                let start = startValue.value;
-                let end = endValue.value;
-
-                // Convert to integers
-                start = parseInt(start);
-                end = parseInt(end);
-
-                let valuesRange = [];
-
-                for (let i = start; i <= end; i++)
-                { valuesRange.push(i);
-                  return valuesRange;
-                }
-              }
-
-              function displayValues()
-              {
-                let numbers = getValues();
-
-                let className = "";
-
-                for (let i = 0; i < numbers.length; i++)
-                {
-                  if (numbers[i] % 2 == 0)
-                  {
-                    className = "even";
-                  } else {
-                    className = "odd";
-                  }
-                  result.innerHTML += `<tr><td class="${className}">${numbers[i]}</td></tr>`;
-                }
-              }
 
             </code>
           </pre>
