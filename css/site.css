@@ -77,3 +77,8 @@ pre[class*="language-"] {
 main > .container {
   padding: 60px 15px 0;
 }
+
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+}
