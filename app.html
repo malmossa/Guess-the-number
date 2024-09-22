@@ -55,36 +55,24 @@
   </nav>
 
   <!-- Main Section -->
-  <main class="flex-shrink-0">
-    <div class="container mt-5">
-      <div class="col">
-        <div class="row-12 ">
-          <h1 class="text-center">Guess the number: A Coding Project</h1>
-          <h4 class="lead">
-            Simple guess the number type game. It should choose a random number between 1 and 100, then challenge the
-            player to
-            guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if
-            they are
-            wrong, whether the guess was too low or too high. It should also tell the player what numbers they
-            previously guessed.
-            The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the
-            player
-            should be given an option to start playing again.
-          </h4>
-        </div>
-        <div class="row justify-content-center mb-3 mt-5">
-          <form class="col-md-8">
-            <div class="form-row align-items-center">
-              <div class="col">
-                <input type="number" class="form-control" id="number" placeholder="Guess the number">
-              </div>
-              <div class="col-auto">
-                <button type="submit" class="btn btn-dark">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+  <main class="container mt-5">
+    <h1 class="text-center mb-4 mt-5">Number Guessing Game</h1>
+    <h4 class="lead">
+      We have selected a random number between 1 to 100. See if you can
+      guess it in 10 turns or fewer. We will tell you if your guess was too
+      high or too low.
+    </h4>
+    <form class="d-flex">
+      <input type="text" class="form-control number-input" placeholder="Enter a guess" />
+      <button type="button" class="btn btn-dark mx-2">Submit</button>
+    </form>
+    <p class="mt-2 previous">
+      Previous guesses: <span class="previous-guesses"></span>
+    </p>
+    <div class="alert d-none text-center mt-3"></div>
+    <p class="last-guess">Last guess was <span class="hight-low"></span></p>
+    <div class="play-again d-none text-center">
+      <button class="btn btn-dark">Play Again</button>
     </div>
   </main>
 
@@ -123,7 +111,8 @@
     </script>
 
   <!-- JavaScript -->
-  <script src="js/site.js"></script>
+  <script src="js/site.js" type="module"></script>
+  <script src="js/confetti.js" type="module"></script>
 
 </body>
 
