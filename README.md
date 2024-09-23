@@ -1,2 +1,2 @@
-# JsSiteTemplate
-This a Starter JS Template for All JavaScript projects 
+# JavaScript Project
+JavaScript project is a number guessing game
