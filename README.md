@@ -1,2 +1,2 @@
 # JavaScript Project
-JavaScript project is a number guessing game
+Try it out: https://malmossa.github.io/Guess-the-number/
